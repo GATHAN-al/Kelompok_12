@@ -1,0 +1,265 @@
+/* Global Reset and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Container Layout */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+/* Left and Right Columns */
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Adjust column width */
+}
+
+/* Card Styles */
+.card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    background: linear-gradient(60deg, #151516 0%, #1d2229 100%);
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+/* Card Titles */
+.card h2 {
+    z-index: 99;
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    transition: 0.2s ease;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Descriptions */
+.card p {
+    z-index: 99;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 150px;
+    color: #fff;
+    opacity: 0;
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 1px;
+    transition: 0.2s ease;
+}
+
+/* Card Image */
+.card .pic {
+    z-index: 100;
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+}
+
+.card:hover .pic {
+    filter: grayscale(0); /* Remove grayscale on hover */
+}
+
+/* Specific Background Images for Each Card */
+.card:nth-child(1) .pic {
+    background-image: url('2.jpg');
+}
+
+.card:nth-child(2) .pic {
+    background-image: url('1.jpg');
+}
+
+.right-column .card:nth-child(1) .pic {
+    background-image: url('3.jpg');
+}
+
+.right-column .card:nth-child(2) .pic {
+    background-image: url('deluxe-room.jpg');
+}
+
+/* Card Button */
+.card button {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    width: 30px;
+    height: 30px;
+    background-color: #772a9b;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card:hover button {
+    transform: scale(16.5);
+    opacity: 0.5;
+}
+
+/* Card Hover Effects */
+.card:hover h2 {
+    bottom: 80px;
+    left: 20px;
+}
+
+.card:hover p {
+    opacity: 1;
+    left: 20px;
+}
+
+/* Special Styling for Second Card */
+.card2 .pic {
+    background-image: url('1.jpg');
+}
+
+.card2 button {
+    background-color: #26c3a1;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Section Padding */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Room Grid Layout */
+.room-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.room-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.room-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Amenities List */
+.amenities-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.amenity {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 20%;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social-links {
+    margin-bottom: 20px;
+}
+
+.footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
