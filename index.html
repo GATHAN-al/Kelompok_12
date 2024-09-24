@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <title>Wavy Button</title>
     <!--Google Fonts-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="navbar.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,42 +23,72 @@
             scroll-behavior: smooth;
         }
     </style>
+    <header class="hero">
+      <nav class="navbar">
+        <div class="logo">
+          <img src=".png" alt="Bali Resort Logo">
+        </div>
+          <ul class="nav-links">
+            
+            <li><a href="#rooms">Akomodasi</a></li> <!-- Tautan internal -->
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#dining">Dining</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <section id="rooms" class="section rooms">
+
+          <h1>Welcome to Bali Resort</h1>
+          <p>Your tropical paradise awaits</p>
+      </div>
+  </header>
 </head>
 <body>
-    <header class="hero">
-        <nav class="navbar">
-            <div class="logo">Bali Resort</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#rooms">Rooms</a></li>
-                <li><a href="#amenities">Amenities</a></li>
-                <li><a href="#dining">Dining</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <h1>Welcome to Bali Resort</h1>
-            <p>Your tropical paradise awaits</p>
-            <a href="#rooms" class="cta-button">Explore Rooms</a>
+  
+  <div class="container">
+    <input type="radio" name="slider" id="Akomodasi1">
+    <input type="radio" name="slider" id="Akomodasi2">
+    <input type="radio" name="slider" id="Akomodasi3">
+    <input type="radio" name="slider" id="Akomodasi4">
+    <input type="radio" name="slider" id="Akomodasi5">
+    
+    <nav>
+        <label for="Akomodasi1">Kamar</label>
+        <label for="Akomodasi2">Suite</label>
+        <label for="Akomodasi3">Villa</label>
+        <div class="slider"></div>
+    </nav>
+    <section>
+        <div class="content content-1">
+        <div class="title">Kamar</div>
+            <p> jadi inilah pilihan yang anda dapatkan</p>
+            
         </div>
-    </header>
-
+        <div class="content content-2">
+        <div class="title">Suite</div>
+            <p> jadi inilah pilihan yang anda dapatkan</p>
+        </div>
+        <div class="content content-3">
+        <div class="title">Villa</div>
+            <p> jadi inilah pilihan yang anda dapatkan</p>
+        </div>
+    </section>
+   </div>
     <!-- Rooms Section -->
-    <section id="rooms" class="section rooms">
-        <div class="container">
+    <section id="" class="section rooms">
+        <div class="kamar">
             <div class="left-column">
                 <div class="card">
                     <h2>Standard Room</h2>
                     <p>A manic and impulsive criminal from Zaum Drest.</p>
-                    <span>Pesan Disini</span>
                     <div class="pic"></div>
                     <button></button>
                 </div>
                 <div class="card card2">
                     <h2>Superior Room</h2>
                     <p>Modern comfort and captivating views for an exceptional stay experience.</p>
-                    <span>Pesan Disini</span>
                     <div class="pic"></div>
                     <button></button>
                 </div>
@@ -76,16 +109,60 @@
                 </div>
             </div>
             <div class="wrapper">
-                <div class="item item1"></div>
-                <div class="item item2"></div>
-                <div class="item item3"></div>
-                <div class="item item4"></div>
-                <div class="item item5"></div>
-                <div class="item item6"></div>
-                <div class="item item7"></div>
-                <div class="item item8"></div>
+              <div class="scroll-content">
+                  <!-- Add 6 logos with unique class names -->
+                  <div class="item item1">
+                      <img src="agoda.jpg" alt="agoda logo">
+                  </div>
+                  <div class="item item2">
+                      <img src="accor.png" alt="accor logo">
+                  </div>
+                  <div class="item item3">
+                      <img src="booking.png" alt="booking logo">
+                  </div>
+                  <div class="item item4">
+                      <img src="tripadvisor.png" alt="Tripadvisor Logo">
+                  </div>
+                  <div class="item item5">
+                      <img src="traveloka.png" alt="traveloka Logo">
+                  </div>
+                  <div class="item item6">
+                      <img src="traveloka.png" alt="Hotels Logo">
+                  </div>
+                  <div class="item item7">
+                      <img src="traveloka.png" alt="Hotels Logo">
+                  </div>
+                  <div class="item item8">
+                      <img src="traveloka.png" alt="Hotels Logo">
+                  </div>
+          
+                  <!-- Duplicate items for smooth scrolling -->
+                  <div class="item item1">
+                      <img src="agoda.png" alt="Agoda Logo">
+                  </div>
+                  <div class="item item2">
+                      <img src="accor.png" alt="Accor Logo">
+                  </div>
+                  <div class="item item3">
+                      <img src="booking.png" alt="Booking Logo">
+                  </div>
+                  <div class="item item4">
+                      <img src="tripadvisor.png" alt="Tripadvisor Logo">
+                  </div>
+                  <div class="item item5">
+                      <img src="traveloka.png" alt="traveloka Logo">
+                  </div>
+                  <div class="item item6">
+                      <img src="traveloka.png" alt="Hotels Logo">
+                  </div>
+                  <div class="item item7">
+                      <img src="traveloka.png" alt="Hotels Logo">
+                  </div>
+                  <div class="item item8">
+                      <img src="traveloka.png" alt="Hotels Logo">
+                  </div>
               </div>
-        </div>
+          </div>
         
     </section>
 
@@ -110,7 +187,7 @@
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
             <a href="#">Twitter</a>
-        </div>
+                    </div>
         <p>&copy; 2024 Bali Resort Hotel | All Rights Reserved</p>
     </footer>
 </body>
