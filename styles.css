@@ -47,23 +47,15 @@
   }
 
 .item {
-<<<<<<< HEAD
     width: 200px;
     height: 100px;
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 6px;
     flex-shrink: 0; /* Mencegah item mengecil */
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-=======
-  width: 200px;
-  height: 100px;
-  background-color: royalblue;
-  border-radius: 6px;
-  position: absolute;
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
   left: max(calc(200px * 8), 100%);
   animation-name: scrollLeft;
   animation-duration: 20s;
@@ -110,8 +102,7 @@
 }
 
 body {
-<<<<<<< HEAD
-    background-color: rgb(255, 255, 255); /* Warna latar belakang body */
+    background-color: #f8f5f2; /* Warna latar belakang body */
     color: #333; /* Warna teks default */
 }
 head {
@@ -120,10 +111,6 @@ head {
     justify-content: center;
     align-items: center;
     background: #f9f4ef;
-=======
-    background-color:wheat;
-    color: #333;
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 }
 /* Container Layout */
 .container {
@@ -237,7 +224,6 @@ input#Akomodasi3:checked ~ nav::before {
 
 /* Card Titles */
 .card h2 {
-<<<<<<< HEAD
     z-index: 99; /* Membawa elemen ke depan */
     position: absolute; /* Posisi absolut untuk mengatur posisi manual */
     bottom: 25px; /* Jarak dari bawah 25px */
@@ -246,22 +232,10 @@ input#Akomodasi3:checked ~ nav::before {
     font-weight: 700; /* Ketebalan font judul */
     color: #020826; 
     transition: 0.2s ease; /* Transisi lembut pada perubahan posisi atau warna */
-=======
-    z-index: 99;
-    position: absolute;
-    bottom: 25px;
-    left: 20px;
-    font-size: 28px;
-    font-weight: 700;
-    color: wheat;
-    transition: 0.2s ease;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 }
 
 /* Card Descriptions */
 .card p {
-<<<<<<< HEAD
     z-index: 99; /* Elemen berada di atas elemen lain */
     position: absolute; /* Posisi absolut untuk penempatan manual */
     bottom: 10px; /* Jarak dari bawah 10px */
@@ -273,19 +247,6 @@ input#Akomodasi3:checked ~ nav::before {
     text-align: left; /* Teks rata kiri */
     letter-spacing: 1px; /* Jarak antar huruf */
     transition: 0.2s ease; /* Transisi lembut saat hover */
-=======
-    z-index: 99;
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    width: 150px;
-    color: white;
-    opacity: 0;
-    font-size: 14px;
-    text-align: left;
-    letter-spacing: 1px;
-    transition: 0.5s ease;
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 }
 
 /* Card Image */
@@ -309,11 +270,7 @@ input#Akomodasi3:checked ~ nav::before {
 }
 
 .card:nth-child(2) .pic {
-<<<<<<< HEAD
     background-image: url('1.jpg'); /* Gambar untuk kartu kedua */
-=======
-    background-image: url('5.jpg');
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 }
 
 .right-column .card:nth-child(1) .pic {
@@ -321,16 +278,11 @@ input#Akomodasi3:checked ~ nav::before {
 }
 
 .right-column .card:nth-child(2) .pic {
-<<<<<<< HEAD
     background-image: url('3.jpg'); /* Gambar untuk kartu kedua di kolom kanan */
-=======
-    background-image: url('4.jpg');
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 }
 
 /* Card Button */
 .card button {
-<<<<<<< HEAD
     position: absolute; /* Posisi absolut di dalam kartu */
     right: 30px; /* Jarak dari kanan 30px */
     bottom: 40px; /* Jarak dari bawah 40px */
@@ -341,18 +293,6 @@ input#Akomodasi3:checked ~ nav::before {
     border-radius: 50%; /* Tombol bulat */
     cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
     transition: 0.3s ease; /* Transisi lembut saat hover */
-=======
-    position: absolute;
-    right: 30px;
-    bottom: 40px;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s ease;
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 }
 
 .card:hover button {
@@ -382,7 +322,6 @@ input#Akomodasi3:checked ~ nav::before {
 
 /* Navbar Styling */
 .navbar {
-<<<<<<< HEAD
     display: flex; /* Flexbox untuk tata letak navbar */
     justify-content: space-between; /* Item di dalam navbar diatur dengan jarak merata */
     align-items: center; /* Item di dalam navbar disejajarkan di tengah secara vertikal */
@@ -418,47 +357,6 @@ input#Akomodasi3:checked ~ nav::before {
     text-decoration: none; /* Menghilangkan garis bawah pada link */
     color: #020826; /* Warna teks link */
     font-weight: bold; /* Tebal font pada link */
-=======
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top:5px;
-    background-color: rgba(255, 255, 255, 0.331);
-    position: absolute;
-    width: 95%;
-    top: 0;
-    font-size: 19px;
-}
-
-.navbar .logo {
-    font-size: 30px;
-    font-weight: bolder;
-    padding:20px;
-    padding-top: 10px;
-    color: rgb(107, 4, 4);
-}
-
-.navbar .nav-links {
-    list-style-type:none;
-}
-
-.navbar .nav-links li {
-    display: inline;
-    margin: 0px 10px;
-    text-align: center;
-}
-
-.navbar .nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bolder;
-    padding: 16px;
-}
-.navbar .nav-links li a:hover{
-    background: rgba(255, 255, 255, 0.45);
-    color:rgb(128, 128, 128);
-    transition: 0.5s;
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 }
 
 /* Hero Section */
@@ -474,7 +372,6 @@ input#Akomodasi3:checked ~ nav::before {
 }
 
 .hero-content h1 {
-<<<<<<< HEAD
     font-size: 48px; /* Ukuran font besar untuk judul hero */
     margin-bottom: 20px; /* Jarak bawah judul */
 }
@@ -491,31 +388,6 @@ input#Akomodasi3:checked ~ nav::before {
     text-decoration: none; /* Menghilangkan garis bawah pada link */
     font-size: 18px; /* Ukuran font tombol */
     border-radius: 5px; /* Sudut tombol melengkung */
-=======
-    font-size: 80px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 40px;
-    margin-bottom: 40px;
-    
-}
-
-.cta-button {
-    background-color: #3cdfee;
-    color: white;
-    padding: 20px 30px;
-    text-decoration: none;
-    font-size: 30px;
-    border-radius: 5px;
-    
-}
-.cta-button:hover{
-    background-color: antiquewhite;
-    color: #26c3a1;
-    transition: 0.5s;
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 }
 
 /* Section Padding */
@@ -553,14 +425,14 @@ input#Akomodasi3:checked ~ nav::before {
 }
 
 .amenity {
-<<<<<<< HEAD
     background-color: #078080; /* Warna latar belakang untuk setiap fasilitas */
-    color: whitesmoke; /* Warna teks fasilitas */
+    color: white; /* Warna teks fasilitas */
     padding: 15px; /* Padding di dalam fasilitas */
     border-radius: 5px; /* Sudut fasilitas melengkung */
     font-weight: bold; /* Teks fasilitas dibuat tebal */
     width: 20%; /* Lebar setiap fasilitas 20% */
 }
+
 .slider-wrapper {
     overflow: visible;
     margin:10px;
@@ -636,22 +508,7 @@ input#Akomodasi3:checked ~ nav::before {
       display: none;
     }
   }
-  
-=======
-    background-color: #3cdfee;
-    color: black;
-    padding: 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    width: 20%;
-}
-.amenity:hover{
-    background-color: antiquewhite;
-    color: #26c3a1;
-    transition: 0.5s;
-}
 
->>>>>>> 9605cf19cf5e14af5efc1acd3659dc633ce68f35
 /* Footer Styling */
 .footer {
     background-color: #094067; /* Warna latar belakang footer */
