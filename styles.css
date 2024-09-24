@@ -49,7 +49,7 @@
 .item {
     width: 200px;
     height: 100px;
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 6px;
     flex-shrink: 0; /* Mencegah item mengecil */
     display: flex;
@@ -102,7 +102,7 @@
 }
 
 body {
-    background-color: #f8f5f2; /* Warna latar belakang body */
+    background-color: rgb(255, 255, 255); /* Warna latar belakang body */
     color: #333; /* Warna teks default */
 }
 head {
@@ -426,13 +426,88 @@ input#Akomodasi3:checked ~ nav::before {
 
 .amenity {
     background-color: #078080; /* Warna latar belakang untuk setiap fasilitas */
-    color: white; /* Warna teks fasilitas */
+    color: whitesmoke; /* Warna teks fasilitas */
     padding: 15px; /* Padding di dalam fasilitas */
     border-radius: 5px; /* Sudut fasilitas melengkung */
     font-weight: bold; /* Teks fasilitas dibuat tebal */
     width: 20%; /* Lebar setiap fasilitas 20% */
 }
-
+.slider-wrapper {
+    overflow: visible;
+    margin:10px;
+    width: 1100px;
+    margin-bottom:40px;
+  }
+  
+  .card-list .card-item {
+    color: white;
+    width: 10px;
+    user-select: none;
+    padding: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 55px;
+    background: rgb(52, 47, 47);
+  }
+  
+  .card-list .card-item .user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    border: 5px solid white;
+    padding: 3px;
+    margin-bottom: 32px;
+  }
+  
+  .card-list .card-item .user-name {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .card-list .card-item .review-text {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    margin: 18px 0;
+  }
+  
+  .card-list .card-item .review-rating span {
+    color: #ffd700;
+    cursor: pointer;
+  }
+  
+  .slider-wrapper .swiper-pagination-bullet {
+    background: blue;
+    width: 15px;
+    height: 15px;
+  }
+  
+  .slider-wrapper .swiper-slider-button {
+    color: #fff;
+    margin-top: -50px;
+    transition: 0.3s ease;
+  }
+  
+  .slider-wrapper .swiper-slider-button:hover {
+    color: #ffd700;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .slider-wrapper {
+      margin: 0 10px 40px;
+    }
+  
+    .slider-wrapper .swiper-slider-button {
+      display: none;
+    }
+  }
+  
 /* Footer Styling */
 .footer {
     background-color: #094067; /* Warna latar belakang footer */
