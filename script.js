@@ -10,7 +10,6 @@ const swiper = new Swiper(".slider-wrapper", {
       clickable: true,
       dynamicBullets: true,
     },
-  
     // Navigation arrows
     navigation: {
       nextEl: ".swiper-button-next",
@@ -29,4 +28,3 @@ const swiper = new Swiper(".slider-wrapper", {
       },
     },
   });
-  

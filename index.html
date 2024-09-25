@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bali Resort Hotel</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Wavy Button</title>
     <!--Google Fonts-->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
@@ -31,7 +34,6 @@
           <img src=".png" alt="Bali Resort Logo">
         </div>
           <ul class="nav-links">
-            
             <li><a href="#rooms">Akomodasi</a></li> <!-- Tautan internal -->
             <li><a href="#amenities">Amenities</a></li>
             <li><a href="#dining">Dining</a></li>
@@ -39,12 +41,85 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="hero-content">
         <section id="rooms" class="section rooms">
+          <div class="hero-content">
+            <div class="arrow l" onclick="prev()">
+              <img src="l.png" alt="l">
+          </div>
+          <div class="slide slide-1">
+               <div class="caption">
+                   <h3>Hello! Welcome to Bali Resort</h3>
+                   <p>The perfect destination for your dream vacation.</p>
+               </div>
+          </div>
+          <div class="slide slide-2">
+              <div class="caption">
+                  <h3>Experience calm and luxury at Bali Resort.</h3>
+                  <p>Your dream vacation starts here.</p>
+              </div>
+         </div>
+         <div class="slide slide-3">
+              <div class="caption">
+                  <h3>We are delighted to welcome you to Bali Resort.</h3>
+                  <p>where every moment is designed specifically for your comfort.</p>
+              </div>
+         </div>
+         <div class="arrow r" onclick="next()">
+              <img src="r.png" alt="r">
+          </div>
+      </div>  
+  
+     <script>
+      let slide = document.querySelectorAll('.slide'); //menjadikan satu class di class slide(gambar)
+      var current = 0;//menampilkan slide pertama yang akan dimunculkan
+      var autoSlideInterval;//slide berjalan secara otomatis
 
-          <h1>Welcome to Bali Resort</h1>
-          <p>Your tropical paradise awaits</p>
-      </div>
+      function cls() {
+      //menyembunyikan slide
+      for (let i = 0; i < slide.length; i++) {
+        slide[i].style.display = 'none';
+       } 
+     }
+
+    function next() {
+    //menmpilkan slide berikutnya
+    cls();
+    if (current === slide.length - 1) current = -1;//mengembalikan ke awal slide
+    current++;//untuk ke slide selaanjutnya
+
+    slide[current].style.display = 'block';
+  
+    }
+
+    function prev() {
+     cls();
+     if (current === 0) current = slide.length;//jika saat ini di slide pertama, reset current ke slide terakhir.
+     current--;//untuk ke slide berikut
+
+     slide[current].style.display = 'block';
+
+    }
+
+    function start() {
+      cls();
+      slide[current].style.display = 'block';
+    }
+
+    //Fungsi untuk mengaktifkan auto-slide
+    function autoSlide() {
+     autoSlideInterval = setInterval(next, 3000); //Slide berubah setiap 3 detik
+   }
+
+   // Fungsi untuk menghentikan auto-slide (jika diperlukan)
+    function stopAutoSlide() {
+     clearInterval(autoSlideInterval);
+   }
+
+  // Memulai slide dan auto-slide ketika halaman dimuat
+    start();
+    autoSlide();
+   </script>
+
   </header>
 </head>
 <body>
@@ -189,7 +264,7 @@
           <div class="card-item swiper-slide">
             <img src="user1.jpg" alt="User Profile" class="user-image" />
             <h3 class="user-name">Liam Parker</h3>
-            <p class="review-text">"We are presently staying in the most luxurious resort we have ever been to. The Bali resort Nusa Dua Beach Resort is a most wonderful place to have a holiday. The resort is so beautiful and has the highest quality facilities. "</p>
+            <p class="review-text">"We are presently staying in the most luxurious resort we have ever been to.Resort is a most wonderful place to have a holiday. The resort is so beautiful and has the highest quality facilities. "</p>
             <div class="review-rating">
               <span class="material-symbols-outlined"> star </span>
               <span class="material-symbols-outlined"> star </span>
@@ -213,7 +288,7 @@
           <div class="card-item swiper-slide">
             <img src="user3.jpg" alt="User Profile" class="user-image" />
             <h3 class="user-name">Peter Larssen</h3>
-            <p class="review-text">"Amazing hotel in Nusa Dua. Family friendly and luxurious. Rooms and per the photos, super cleanly and spacious. Definitely recommend this hotel if you are planning a trip to Bali away from the hustle and bustle of Kuta"</p>
+            <p class="review-text">"Amazing hotel in Nusa Dua. Family friendly and luxurious, super cleanly and spacious. Definitely recommend this hotel if you are planning a trip to Bali away from the hustle and bustle of Kuta"</p>
             <div class="review-rating">
               <span class="material-symbols-outlined"> star </span>
               <span class="material-symbols-outlined"> star </span>
@@ -225,7 +300,7 @@
           <div class="card-item swiper-slide">
             <img src="user4.jpg" alt="User Profile" class="user-image" />
             <h3 class="user-name">Billy Foster</h3>
-            <p class="review-text">".The hotel location in Nusa Dua is excellent. There's plenty in the resort to entertain and feed you, and if you want more you can stroll along the beach to any of the other restaurants or resorts. Everything was good!!!"</p>
+            <p class="review-text">".The hotel is excellent. There's plenty in the resort to entertain , and if you want more you can stroll along the beach to any of the other restaurants or resorts. Everything was good!!!"</p>
             <div class="review-rating">
               <span class="material-symbols-outlined"> star </span>
               <span class="material-symbols-outlined"> star </span>
@@ -255,14 +330,52 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 
+    <!-- Footer -->
     <footer class="footer">
-        
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">Jalan Raya Ubud No.88, Ubud, Gianyar, Bali 80571, Indonesia</a></li>
+                        <li><a href="#">Telp: +62 (899) 8954 3222</a></li>
+                        <li><a href="#">WA: +62 811 738 8921</a></li>
+                        <li><a href="#">Fax: +62 (899) 8954 3111</a></li>
+                        <li><a href="#">Email: acv1622@sofitel.com</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Accommodations</a></li>
+                        <li><a href="#">Promotion</a></li>
+                        <li><a href="#">F&B</a></li>
+                        <li><a href="#">Wedding</a></li>
+                        <li><a href="#">Birthday</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Booking Status</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-        <p>&copy; 2024 Bali Resort Hotel | All Rights Reserved</p>
-    </footer>
+                </div>
+            </div>
+        </div>
+   </footer>
+
 </body>
 </html>
