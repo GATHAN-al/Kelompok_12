@@ -4,31 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Bali Resort Hotel</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="hero">
+    <link rel="stylesheet" href="home.css">
+    <script src="navbar.js"></script>
+
+    <style>
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+     <!-- Hero Section with Navbar -->
+     <header class="hero">
         <nav class="navbar">
-            <div class="logo">Bali Resort</div>
+            <div class="logo">
+                <img src=".png" alt="Bali Resort Logo">
+            </div>
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li> <li><a href="index.html#rooms">Rooms</a></li>
-                <li><a href="index.html#amenities">Amenities</a></li>
-                <li><a href="index.html#dining">Dining</a></li>
-                <li><a href="index.html#gallery">Gallery</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+            
+                <li><a href="#rooms">Akomodasi</a></li> <!-- Tautan internal -->
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#dining">Dining</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="hero-content">
+            <section id="rooms" class="section rooms">
+
             <h1>Welcome to Bali Resort</h1>
-            <p>Discover your tropical paradise</p>
-            <div class="booking-form">
-                <label for="checkin">Check-in:</label>
-                <input type="date" id="checkin" name="checkin">
-                <label for="checkout">Check-out:</label>
-                <input type="date" id="checkout" name="checkout">
-                <button type="submit">Book Now</button>
-            </div>
+            <p>Your tropical paradise awaits</p>
         </div>
     </header>
-</body>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="header">
+            <input placeholder="Check In" type="text"/>
+            <input placeholder="Check Out" type="text"/>
+            <button>CHECK AVAILABILITY</button>
+        </div>
+        <div class="content">
+            <img alt="Aerial view of a luxurious beach resort surrounded by lush greenery and a beautiful coastline"
+            src="1.jpg"
+                 width="800" height="600"/>
+            <div class="text">
+                <h1>Liburan Mewah di Tepi Pantai</h1>
+                <p>
+                    Nikmati kemewahan yang mewakili inspirasi Prancis di Sofitel Bali Nusa Dua Beach Resort, sebuah tempat
+                    perlindungan tepi pantai 5 bintang bergengsi dengan taman tropis yang indah dan arsitektur modern yang
+                    elegan. Sebagai bagian dari program MyResorts yang menawarkan pengalaman eksklusif bagi anggota ALL,
+                    resor megah ini menyediakan 413 kamar yang luar biasa, termasuk 39 suite dan vila, serta berbagai
+                    fasilitas resor.
+                </p>
+                <p>
+                    Nikmati perjalanan kuliner di tiga restoran dan dua bar, pulihkan diri di Sofitel FITNESS dan Sofitel
+                    SPA, dan nikmati klub anak-anak indoor dan outdoor. Selain itu, resor ini memiliki 24 ruang fungsi,
+                    termasuk sebuah Balai Besar dan Balai Tepi Pantai. Temukan kehidupan seni yang paling utama di Club
+                    Millésime, di mana hidangan lezat, anggur yang luar biasa, dan pemandangan Nusa Dua yang menakjubkan
+                    menanti Anda.
+                </p>
+            </div>
+        </div>
+    </div>
+    <body>
+        <div class="header">
+            
+        </div>
+        
+        <div class="gambar">
+            <img src="3.jpg" alt="Gambar 1" />
+            <img src="3.jpg" alt="Gambar 2" />
+            <img src="1.jpg" alt="Gambar 3" />
+            <img src="1.jpg" alt="Gambar 4" />
+            <img src="1.jpg" alt="Gambar 5" />
+            <img src="1.jpg" alt="Gambar 6" />
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1545100.7205666862!2d106.01694058262851!3d-6.302027112102189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f65c8572640d%3A0xc0a066d78372614e!2sUniversitas%20Tarumanagara!5e1!3m2!1sid!2sid!4v1727197709021!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"></iframe>" 
+               
+            </iframe>
+        </div>
+        
+        <div class="footer">
+        </div>
+        
+       </body>
 </html>

@@ -4,20 +4,19 @@
     padding: 0; /* Menghapus padding default dari semua elemen */
     box-sizing: border-box; /* Mengatur box-sizing agar padding dan border tidak menambah ukuran elemen */
     font-family: "Lora", sans-serif; /* Mengatur font global menjadi Arial atau sans-serif */
-  }
-  
-  *,
-  *::before,
-  *::after {
+}
+
+
+*, *::before, *::after {
     box-sizing: border-box;
-  }
-  
-  * {
+}
+
+* {
     margin: 0;
     padding: 0;
-  }
-  
-  .wrapper {
+}
+
+.wrapper {
     width: 90%;
     max-width: 1536px;
     margin-inline: auto;
@@ -32,22 +31,22 @@
       rgba(0, 0, 0, 1) 80%,
       rgba(0, 0, 0, 0)
     );
-  }
-  
-  .scroll-content {
+}
+
+.scroll-content {
     display: flex;
     gap: 20px;
     animation: scrollLeft 20s linear infinite;
     will-change: transform;
-  }
-  
-  @keyframes scrollLeft {
+}
+
+@keyframes scrollLeft {
     to {
       left: -200px;
     }
   }
-  
-  .item {
+
+.item {
     width: 200px;
     height: 100px;
     background-color: white;
@@ -57,82 +56,84 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: max(calc(200px * 8), 100%);
-    animation-name: scrollLeft;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-  
-  .item img {
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item img {
     max-width: 100%;
     height: auto;
-  }
-  
-  /* Set individual animation-delay for each item */
-  .item1 {
+}
+
+/* Set individual animation-delay for each item */
+.item1 {
     animation-delay: calc(20s / 8 * (8 - 1) * -1);
-  }
-  
-  .item2 {
+}
+
+.item2 {
     animation-delay: calc(20s / 8 * (8 - 2) * -1);
-  }
-  
-  .item3 {
+}
+
+.item3 {
     animation-delay: calc(20s / 8 * (8 - 3) * -1);
-  }
-  
-  .item4 {
+}
+
+.item4 {
     animation-delay: calc(20s / 8 * (8 - 4) * -1);
-  }
-  
-  .item5 {
+}
+
+.item5 {
     animation-delay: calc(20s / 8 * (8 - 5) * -1);
-  }
-  
-  .item6 {
+}
+
+.item6 {
     animation-delay: calc(20s / 8 * (8 - 6) * -1);
-  }
-  
-  .item7 {
+}
+
+.item7 {
     animation-delay: calc(20s / 8 * (8 - 7) * -1);
-  }
-  
-  .item8 {
+}
+
+.item8 {
     animation-delay: calc(20s / 8 * (8 - 8) * -1);
-  }
-  
-  body {
+}
+
+body {
     background-color: #f8f5f2; /* Warna latar belakang body */
     color: #333; /* Warna teks default */
-  }
-  head {
-    /* Sudah cukup dengan 100vh */
+}
+head {
+     /* Sudah cukup dengan 100vh */
     margin: 0;
     justify-content: center;
     align-items: center;
     background: #f9f4ef;
-  }
-  /* Container Layout */
-  .container {
+}
+/* Container Layout */
+.container {
     max-width: 350px;
     width: 100%;
     padding: 30px 10px;
     border-radius: 15px;
     flex-direction: column;
     margin: 0 auto;
-  }
-  
-  .container nav {
+    
+    
+}
+
+.container nav {
     position: relative;
     height: 50px;
     width: 100%; /* Make the nav take full width */
     display: flex;
     align-items: center;
     justify-content: center; /* Centers the nav content horizontally */
-  }
-  
-  .container nav::after {
+}
+
+.container nav::after {
     content: "";
     background: silver;
     width: 100%;
@@ -140,9 +141,9 @@
     position: absolute;
     top: 47px;
     filter: blur(0.5px);
-  }
-  
-  .container nav label {
+}
+
+.container nav label {
     position: relative;
     display: block;
     height: 100%;
@@ -153,19 +154,19 @@
     font-weight: 600;
     transition: all 0.3s ease;
     margin-right: 20px;
-  }
-  
-  /* When the radio input is checked, change the label color */
-  input[type="radio"]:checked + nav label {
+}
+
+/* When the radio input is checked, change the label color */
+input[type="radio"]:checked + nav label {
     color: #1e1f1f;
-  }
-  
-  input[type="radio"] {
+}
+
+input[type='radio'] {
     display: none;
-  }
-  
-  /* Creating the sliding indicator for the navigation */
-  .container nav::before {
+}
+
+/* Creating the sliding indicator for the navigation */
+.container nav::before {
     content: "";
     position: absolute;
     height: 4.5px;
@@ -177,82 +178,79 @@
     bottom: 0;
     transition: all 0.3s ease;
     filter: blur(0.4px);
-  }
-  
-  /* Add different styles to move the slider based on which radio input is checked */
-  input#Akomodasi1:checked ~ nav::before {
+}
+
+/* Add different styles to move the slider based on which radio input is checked */
+input#Akomodasi1:checked ~ nav::before {
     left: 19%;
-  }
-  input#Akomodasi2:checked ~ nav::before {
+}
+input#Akomodasi2:checked ~ nav::before {
     left: 40%;
-  }
-  input#Akomodasi3:checked ~ nav::before {
+}
+input#Akomodasi3:checked ~ nav::before {
     left: 57%;
-  }
-  
-  .kamar {
+}
+
+
+
+.kamar {
     width: 100%; /* Lebar container penuh */
     display: flex; /* Flexbox digunakan untuk tata letak */
     justify-content: space-between; /* Item di dalam container tersebar merata */
     flex-wrap: wrap; /* Mengizinkan item untuk membungkus ke baris baru jika diperlukan */
-  }
-  
-  /* Left and Right Columns */
-  .left-column,
-  .right-column {
+   
+}
+
+/* Left and Right Columns */
+.left-column, .right-column {
     display: flex; /* Flexbox untuk tata letak kolom */
     flex-direction: column; /* Elemen dalam kolom disusun secara vertikal */
     width: 48%; /* Lebar setiap kolom adalah 48% */
-  }
-  
-  /* Card Styles */
-  .card {
+}
+
+/* Card Styles */
+.card {
     position: relative; /* Posisi relatif untuk mengatur posisi elemen lain di dalamnya */
     width: 100%; /* Lebar kartu penuh */
     height: 300px; /* Tinggi kartu 300px */
     padding: 15px; /* Padding di dalam kartu */
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0
-    ); /* Latar belakang kartu transparan */
+    background-color: rgba(255, 255, 255, 0); /* Latar belakang kartu transparan */
     margin-bottom: 15px; /* Jarak bawah antar kartu */
     border-radius: 20px; /* Sudut kartu melengkung */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Efek bayangan lembut di sekitar kartu */
     overflow: hidden; /* Sembunyikan konten yang keluar dari batas kartu */
     transition: 0.3s ease; /* Transisi lembut saat hover */
-  }
-  
-  /* Card Titles */
-  .card h2 {
+}
+
+/* Card Titles */
+.card h2 {
     z-index: 99; /* Membawa elemen ke depan */
     position: absolute; /* Posisi absolut untuk mengatur posisi manual */
     bottom: 25px; /* Jarak dari bawah 25px */
     left: 20px; /* Jarak dari kiri 20px */
     font-size: 28px; /* Ukuran font judul */
     font-weight: 700; /* Ketebalan font judul */
-    color: #020826;
+    color: #020826; 
     transition: 0.2s ease; /* Transisi lembut pada perubahan posisi atau warna */
-  }
-  
-  /* Card Descriptions */
-  .card p {
+}
+
+/* Card Descriptions */
+.card p {
     z-index: 99; /* Elemen berada di atas elemen lain */
     position: absolute; /* Posisi absolut untuk penempatan manual */
     bottom: 10px; /* Jarak dari bawah 10px */
     left: 20px; /* Jarak dari kiri 20px */
     width: 150px; /* Lebar teks deskripsi */
-    color: #020826;
+    color: #020826; 
     opacity: 0; /* Deskripsi tersembunyi (akan muncul saat hover) */
     font-size: 14px; /* Ukuran font deskripsi */
     text-align: left; /* Teks rata kiri */
     letter-spacing: 1px; /* Jarak antar huruf */
     transition: 0.2s ease; /* Transisi lembut saat hover */
-  }
-  
-  /* Card Image */
-  .card .pic {
+}
+
+/* Card Image */
+.card .pic {
     z-index: 100; /* Membawa elemen gambar ke depan */
     width: 100%; /* Lebar gambar penuh */
     height: 180px; /* Tinggi gambar 180px */
@@ -260,31 +258,31 @@
     background-position: center; /* Gambar diposisikan di tengah */
     border-radius: 12px; /* Sudut gambar melengkung */
     transition: 0.3s ease; /* Transisi lembut pada perubahan filter */
-  }
-  
-  .card:hover .pic {
+}
+
+.card:hover .pic {
     filter: grayscale(0); /* Hilangkan grayscale saat hover */
-  }
-  
-  /* Specific Background Images for Each Card */
-  .card:nth-child(1) .pic {
-    background-image: url("2.jpg"); /* Gambar untuk kartu pertama */
-  }
-  
-  .card:nth-child(2) .pic {
-    background-image: url("1.jpg"); /* Gambar untuk kartu kedua */
-  }
-  
-  .right-column .card:nth-child(1) .pic {
-    background-image: url("3.jpg"); /* Gambar untuk kartu pertama di kolom kanan */
-  }
-  
-  .right-column .card:nth-child(2) .pic {
-    background-image: url("3.jpg"); /* Gambar untuk kartu kedua di kolom kanan */
-  }
-  
-  /* Card Button */
-  .card button {
+}
+
+/* Specific Background Images for Each Card */
+.card:nth-child(1) .pic {
+    background-image: url('2.jpg'); /* Gambar untuk kartu pertama */
+}
+
+.card:nth-child(2) .pic {
+    background-image: url('1.jpg'); /* Gambar untuk kartu kedua */
+}
+
+.right-column .card:nth-child(1) .pic {
+    background-image: url('3.jpg'); /* Gambar untuk kartu pertama di kolom kanan */
+}
+
+.right-column .card:nth-child(2) .pic {
+    background-image: url('3.jpg'); /* Gambar untuk kartu kedua di kolom kanan */
+}
+
+/* Card Button */
+.card button {
     position: absolute; /* Posisi absolut di dalam kartu */
     right: 30px; /* Jarak dari kanan 30px */
     bottom: 40px; /* Jarak dari bawah 40px */
@@ -295,35 +293,35 @@
     border-radius: 50%; /* Tombol bulat */
     cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
     transition: 0.3s ease; /* Transisi lembut saat hover */
-  }
-  
-  .card:hover button {
+}
+
+.card:hover button {
     transform: scale(16.5); /* Perbesar tombol saat hover */
     opacity: 0.5; /* Ubah transparansi tombol */
-  }
-  
-  /* Card Hover Effects */
-  .card:hover h2 {
+}
+
+/* Card Hover Effects */
+.card:hover h2 {
     bottom: 80px; /* Geser judul ke atas saat hover */
     left: 20px; /* Tetap di posisi kiri 20px */
-  }
-  
-  .card:hover p {
+}
+
+.card:hover p {
     opacity: 1; /* Tampilkan deskripsi saat hover */
     left: 20px; /* Tetap di posisi kiri 20px */
-  }
-  
-  /* Special Styling for Second Card */
-  .card2 .pic {
-    background-image: url("1.jpg"); /* Gambar khusus untuk card2 */
-  }
-  
-  .card2 button {
+}
+
+/* Special Styling for Second Card */
+.card2 .pic {
+    background-image: url('1.jpg'); /* Gambar khusus untuk card2 */
+}
+
+.card2 button {
     background-color: #26c3a1; /* Warna tombol khusus untuk card2 */
-  }
-  
-  /* Navbar Styling */
-  .navbar {
+}
+
+/* Navbar Styling */
+.navbar {
     display: flex; /* Flexbox untuk tata letak navbar */
     justify-content: space-between; /* Item di dalam navbar diatur dengan jarak merata */
     align-items: center; /* Item di dalam navbar disejajarkan di tengah secara vertikal */
@@ -334,204 +332,121 @@
     top: 0; /* Posisi navbar di bagian atas halaman */
     z-index: 1000; /* Z-index tinggi agar navbar selalu di atas elemen lain */
     transition: background-color 0.3s ease; /* Animasi transisi untuk background */
-  }
-  
-  .navbar.scrolled {
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.9
-    ); /* Warna latar navbar ketika scroll */
+}
+/*  */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Warna latar navbar ketika scroll */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan saat navbar di-scroll */
-  }
-  
-  .navbar .logo {
+}
+
+.navbar .logo {
     font-size: 24px; /* Ukuran font logo */
     font-weight: bold; /* Tebal font logo */
-  }
-  
-  .navbar .nav-links {
+}
+
+.navbar .nav-links {
     list-style-type: none; /* Menghilangkan bullet pada list item */
-  }
-  
-  .navbar .nav-links li {
+}
+
+.navbar .nav-links li {
     display: inline; /* Menampilkan item list secara horizontal */
     margin: 0 15px; /* Jarak antar item list */
-  }
-  
-  .navbar .nav-links li a {
+}
+
+.navbar .nav-links li a {
     text-decoration: none; /* Menghilangkan garis bawah pada link */
     color: #020826; /* Warna teks link */
     font-weight: bold; /* Tebal font pada link */
-  }
-  
-  /* Hero Section */
-  .hero {
+}
+
+/* Hero Section */
+.hero {
     height: 100vh; /* Hero section mengambil tinggi penuh layar */
-    background: url("1.jpg") no-repeat center center/cover; /* Gambar latar yang diposisikan di tengah dan menutupi seluruh area */
+    background: url('1.jpg') no-repeat center center/cover; /* Gambar latar yang diposisikan di tengah dan menutupi seluruh area */
     display: flex; /* Flexbox untuk tata letak hero */
     flex-direction: column; /* Elemen di dalam hero disusun secara vertikal */
     justify-content: center; /* Elemen di dalam hero diatur di tengah secara vertikal */
     align-items: center; /* Elemen di dalam hero diatur di tengah secara horizontal */
     color: white; /* Warna teks putih */
     text-align: center; /* Teks diatur di tengah */
-  }
-  
-  .hero-content h1 {
+}
+
+.hero-content h1 {
     font-size: 48px; /* Ukuran font besar untuk judul hero */
     margin-bottom: 20px; /* Jarak bawah judul */
-  }
-  
-  .hero-content p {
+}
+
+.hero-content p {
     font-size: 20px; /* Ukuran font deskripsi hero */
     margin-bottom: 40px; /* Jarak bawah deskripsi */
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     background-color: #1e1f1f; /* Warna latar tombol Call to Action */
     color: white; /* Warna teks tombol */
     padding: 10px 20px; /* Padding di dalam tombol */
     text-decoration: none; /* Menghilangkan garis bawah pada link */
     font-size: 18px; /* Ukuran font tombol */
     border-radius: 5px; /* Sudut tombol melengkung */
-  }
-  
-  /* Section Padding */
-  .section {
+}
+
+/* Section Padding */
+.section {
     padding: 60px 20px; /* Padding untuk section */
     text-align: center; /* Teks diatur di tengah */
-  }
-  
-  /* Room Grid Layout */
-  .room-grid {
+}
+
+/* Room Grid Layout */
+.room-grid {
     display: flex; /* Flexbox untuk tata letak grid */
     justify-content: space-around; /* Item di dalam grid tersebar merata */
     margin-top: 30px; /* Jarak dari atas 30px */
-  }
-  
-  .room-card {
+}
+
+.room-card {
     background-color: white; /* Warna latar belakang kartu kamar */
     border-radius: 8px; /* Sudut kartu melengkung */
     padding: 20px; /* Padding di dalam kartu */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan ringan */
     width: 30%; /* Lebar kartu 30% */
     text-align: center; /* Teks di dalam kartu diatur di tengah */
-  }
-  
-  .room-card img {
+}
+
+.room-card img {
     width: 100%; /* Gambar mengambil lebar penuh kartu */
     border-radius: 8px 8px 0 0; /* Sudut gambar melengkung di bagian atas */
-  }
-  
-  /* Amenities List */
-  .amenities-list {
+}
+
+/* Amenities List */
+.amenities-list {
     display: flex; /* Flexbox untuk tata letak list fasilitas */
     justify-content: space-around; /* Item dalam list tersebar merata */
     margin-top: 30px; /* Jarak dari atas 30px */
-  }
-  
-  .amenity {
+}
+
+.amenity {
     background-color: #078080; /* Warna latar belakang untuk setiap fasilitas */
     color: white; /* Warna teks fasilitas */
     padding: 15px; /* Padding di dalam fasilitas */
     border-radius: 5px; /* Sudut fasilitas melengkung */
     font-weight: bold; /* Teks fasilitas dibuat tebal */
     width: 20%; /* Lebar setiap fasilitas 20% */
-  }
-  
-  /* Footer Styling */
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); /* Import font dengan berbagai weight */
-  body {
-    line-height: 1.5; /* Mengatur jarak vertikal antar baris teks */
-    font-family: "Poppins", sans-serif; /* Mengatur font utama = "Poppins" & font cadangan = sans-serif */
-  }
-  * {
-    margin: 0; /* Jarak sisi kanan kiri */
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .container {
-    max-width: 1170px; /* Lebar max */
-    margin: auto; /* Mengatur margin otomatis untuk memusatkan elemen secara horizontal */
-  }
-  .row {
-    display: flex; /* Mengatur elemen untuk menggunakan model layout fleksibel (flexbox) */
-    flex-wrap: wrap; /*Fleksibel dlm hal membungkus ke baris berikutnya jika tidak muat di satu baris */
-  }
-  ul {
-    list-style: none; /* Menghilangkan bullet atau nomor dari elemen list */
-  }
-  .footer {
-    background-color: #24262b;
-    padding: 70px 0; /* Mengatur padding vertikal = 70px, tanpa padding horizontal */
-  }
-  .footer-col {
-    width: 25%;
-    padding: 0 15px;
-  }
-  .footer-col h4 {
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize; /* Huruf pertama dari setiap kata jadi huruf kapital */
-    margin-bottom: 35px;
-    font-weight: 500;
-    position: relative; /* Mengatur posisi elemen relatif terhadap posisi normalnya */
-  }
-  .footer-col h4::before {
-    content: ""; /* Mendefinisikan konten kosong untuk elemen pseudo, memungkinkan penggunaan gaya seperti background atau border */
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #078080;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-  }
-  .footer-col ul li:not(:last-child) {
-    margin-bottom: 10px;
-  }
-  .footer-col ul li a {
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  .footer-col ul li a:hover {
-    color: #ffffff;
-    padding-left: 8px;
-  }
-  .footer-col .social-links a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-  }
-  .footer-col .social-links a:hover {
-    color: #24262b;
-    background-color: #ffffff;
-  }
-  
-  /*responsive*/
-  @media (max-width: 767px) {
-    .footer-col {
-      width: 50%;
-      margin-bottom: 30px;
-    }
-  }
-  @media (max-width: 574px) {
-    .footer-col {
-      width: 100%;
-    }
-  }
-  
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #094067; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    padding: 20px; /* Padding di dalam footer */
+    text-align: center; /* Teks diatur di tengah */
+}
+
+.footer .social-links {
+    margin-bottom: 20px; /* Jarak bawah untuk tautan sosial */
+}
+
+.footer .social-links a {
+    color: white; /* Warna teks untuk tautan sosial */
+    margin: 0 10px; /* Jarak antar tautan sosial */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan sosial */
+}
