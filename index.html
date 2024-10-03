@@ -45,13 +45,86 @@
             <button class="language-button" id="in-button" onclick="changeLanguage('id')">ID</button>
         </div>
       </nav>
+      <section id="rooms" class="section rooms">
+        <div class="hero-content">
+          <div class="arrow l" onclick="prev()">
+            <img src="l.png" alt="l">
+        </div>
+        <div class="slide slide-1">
+             <div class="caption">
+                 <h3>Hello! Welcome to Bali Resort</h3>
+                 <p>The perfect destination for your dream vacation.</p>
+             </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="caption">
+                <h3>Experience calm and luxury at Bali Resort.</h3>
+                <p>Your dream vacation starts here.</p>
+            </div>
+       </div>
+       <div class="slide slide-3">
+            <div class="caption">
+                <h3>We are delighted to welcome you to Bali Resort.</h3>
+                <p>where every moment is designed specifically for your comfort.</p>
+            </div>
+       </div>
+       <div class="arrow r" onclick="next()">
+            <img src="r.png" alt="r">
+        </div>
+    </div>  
+
+   <script>
+    let slide = document.querySelectorAll('.slide'); //menjadikan satu class di class slide(gambar)
+    var current = 0;//menampilkan slide pertama yang akan dimunculkan
+    var autoSlideInterval;//slide berjalan secara otomatis
+
+    function cls() {
+    //menyembunyikan slide
+    for (let i = 0; i < slide.length; i++) {
+      slide[i].style.display = 'none';
+     } 
+   }
+
+  function next() {
+  //menmpilkan slide berikutnya
+  cls();
+  if (current === slide.length - 1) current = -1;//mengembalikan ke awal slide
+  current++;//untuk ke slide selaanjutnya
+
+  slide[current].style.display = 'block';
+
+  }
+
+  function prev() {
+   cls();
+   if (current === 0) current = slide.length;//jika saat ini di slide pertama, reset current ke slide terakhir.
+   current--;//untuk ke slide berikut
+
+   slide[current].style.display = 'block';
+
+  }
+
+  function start() {
+    cls();
+    slide[current].style.display = 'block';
+  }
+
+  //Fungsi untuk mengaktifkan auto-slide
+  function autoSlide() {
+   autoSlideInterval = setInterval(next, 3000); //Slide berubah setiap 3 detik
+ }
+
+ // Fungsi untuk menghentikan auto-slide (jika diperlukan)
+  function stopAutoSlide() {
+   clearInterval(autoSlideInterval);
+ }
+
+// Memulai slide dan auto-slide ketika halaman dimuat
+  start();
+  autoSlide();
+ </script>
       <script src="language.js"></script>
       <script src="navbar.js"></script>
-      <div class="hero-content">
-        <section id="rooms" class="section rooms">
-            <h1 id="hero-title">Welcome to Bali Resort</h1>
-            <p id="hero-description">Your tropical paradise awaits</p>
-      </div>
   </header>
 </head>
 <body>
