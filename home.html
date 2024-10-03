@@ -3,48 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Bali Resort Hotel</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bali Resort Hotel</title>
     <link rel="stylesheet" href="home.css">
-    <script src="navbar.js"></script>
+    <link rel="stylesheet" href="navbar.css">
 
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Wavy Button</title>
+    <!--Google Fonts-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         /* Smooth scrolling behavior */
         html {
             scroll-behavior: smooth;
         }
     </style>
-     <!-- Hero Section with Navbar -->
-     <header class="hero">
-        <nav class="navbar">
-            <div class="logo">
-                <img src=".png" alt="Bali Resort Logo">
-            </div>
-            <ul class="nav-links">
-            
-                <li><a href="#rooms">Akomodasi</a></li> <!-- Tautan internal -->
-                <li><a href="#amenities">Amenities</a></li>
-                <li><a href="#dining">Dining</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <section id="rooms" class="section rooms">
-
-            <h1>Welcome to Bali Resort</h1>
-            <p>Your tropical paradise awaits</p>
-        </div>
-    </header>
+   
 </head>
 <body>
+    <header>
+        <div class="hero-content">
+            <div class="navbar">
+                <a href="#home.html" class="logo">Logo</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Akomodasi</a></li>
+                    <li><a href="#">Amenities</a></li>
+                    <li><a href="#">Dining</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <h1>Welcome to Our Website</h1>
+            <p>Your tagline goes here</p>
+        </div>
+    </header>
 
 
     <div class="container">
         <div class="header">
             <input placeholder="Check In" type="text"/>
             <input placeholder="Check Out" type="text"/>
-            <button>CHECK AVAILABILITY</button>
-        </div>
+            <button onclick="window.location.href='booking.html'">CHECK AVAILABILITY</button>        </div>
         <div class="content">
             <img alt="Aerial view of a luxurious beach resort surrounded by lush greenery and a beautiful coastline"
             src="1.jpg"

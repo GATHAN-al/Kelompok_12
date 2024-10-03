@@ -1,128 +1,31 @@
 /* Global Styles */
 body, html {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     font-family: Arial, sans-serif;
-}.header, .footer {
-    text-align: center;
-    margin: 20px 0;
+    background-color: whitesmoke;
 }
 
-.gambar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Make the columns responsive */
-    gap: 10px;
-    max-width: 1000px;
-    margin: 0 auto;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-.gambar img {
-    width: 100%; /* Ensures the image takes up the full width of its grid cell */
-    height: 300px; /* Fixed height to keep all images uniform */
-    object-fit: cover; /* Crop the image to fit without stretching */
-    transition: transform 0.3s ease-in-out;
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.gambar img:hover {
-    transform: translateY(-10px); /* Adds a hover effect */
-}
-
-/* Positioning Font Awesome Icon (if used) */
-.gambar {
-    position: relative;
-}
-
-.gambar::before {
-    content: '\f04b';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: white;
-    display: none; /* Hide this if not needed */
-}
-
-/* Extra margin for header and footer */
-.header, .footer {
-    margin: 20px 0;
-}
-/* Navbar Styling */
-.navbar {
-    display: flex; /* Flexbox untuk tata letak navbar */
-    justify-content: space-between; /* Item di dalam navbar diatur dengan jarak merata */
-    align-items: center; /* Item di dalam navbar disejajarkan di tengah secara vertikal */
-    padding: 20px; /* Padding untuk navbar */
-    background-color: rgba(255, 255, 255, 0); /* Navbar transparan awalnya */
-    position: fixed; /* Ubah posisi menjadi fixed agar tetap saat scrolling */
-    width: 100%; /* Lebar navbar penuh */
-    top: 0; /* Posisi navbar di bagian atas halaman */
-    z-index: 1000; /* Z-index tinggi agar navbar selalu di atas elemen lain */
-    transition: background-color 0.3s ease; /* Animasi transisi untuk background */
-}
-/*  */
-.navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.9); /* Warna latar navbar ketika scroll */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan saat navbar di-scroll */
-}
-
-.navbar .logo {
-    font-size: 24px; /* Ukuran font logo */
-    font-weight: bold; /* Tebal font logo */
-}
-
-.navbar .nav-links {
-    list-style-type: none; /* Menghilangkan bullet pada list item */
-}
-
-.navbar .nav-links li {
-    display: inline; /* Menampilkan item list secara horizontal */
-    margin: 0 15px; /* Jarak antar item list */
-}
-
-.navbar .nav-links li a {
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-    color: #020826; /* Warna teks link */
-    font-weight: bold; /* Tebal font pada link */
-}
-
-
-/* Hero Section */
-.hero {
-    height: 100vh; /* Hero section mengambil tinggi penuh layar */
-    background: url('1.jpg') no-repeat center center/cover; /* Gambar latar yang diposisikan di tengah dan menutupi seluruh area */
-    display: flex; /* Flexbox untuk tata letak hero */
-    flex-direction: column; /* Elemen di dalam hero disusun secara vertikal */
-    justify-content: center; /* Elemen di dalam hero diatur di tengah secara vertikal */
-    align-items: center; /* Elemen di dalam hero diatur di tengah secara horizontal */
-    color: white; /* Warna teks putih */
-    text-align: center; /* Teks diatur di tengah */
-}
-
-.hero-content h1 {
-    font-size: 48px; /* Ukuran font besar untuk judul hero */
-    margin-bottom: 20px; /* Jarak bawah judul */
-}
-
-.hero-content p {
-    font-size: 20px; /* Ukuran font deskripsi hero */
-    margin-bottom: 40px; /* Jarak bawah deskripsi */
-}
-
-/* Main Container */
-.gambar {
+/* Main Content Styles */
+.container {
     width: 80%;
     margin: 0 auto;
     padding: 40px 0;
 }
 
-/* Check-in and Check-out Section */
 .header {
     display: flex;
     justify-content: space-between;
@@ -135,18 +38,26 @@ body, html {
     border: 2px solid #bfa145;
     border-radius: 5px;
     font-size: 16px;
-    width: 900px;
+    width: 45%;
 }
 
 .header button {
     padding: 10px 20px;
     background-color: #bfa145;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
+.container .header input {
+    margin-right: 10px; /* Memberi jarak antar input */
+}
+
+.container .header button {
+    margin-left: 10px; /* Memberi jarak antara tombol dan input terakhir */
+}
+
 
 .header button:hover {
     background-color: #a08330;
@@ -159,7 +70,6 @@ body, html {
     margin-top: 40px;
 }
 
-/* Image and Text Side by Side */
 .content img {
     width: 50%;
     border-radius: 10px;
@@ -182,20 +92,43 @@ body, html {
     margin-bottom: 20px;
 }
 
+/* Image Gallery */
+.gambar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
 
+.gambar img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
 
+.gambar img:hover {
+    transform: translateY(-10px);
+}
 
-
-
+/* Map Container */
 .map-container {
-    text-align: center; /* Center the map */
-    margin: 20px auto; /* Add margin to the top and bottom */
+    text-align: center;
+    margin: 20px auto;
 }
 
 .map-container iframe {
-    width: 100%; /* Full width for responsive design */
-    max-width: 1000px; /* Set a max width */
-    height: 450px; /* Set a fixed height */
-    
-    border: none; /* Remove iframe border */
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    border: none;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: #f1f1f1;
 }

@@ -1,0 +1,25 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+form {
+	width: 50%;
+	margin: 40px auto;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input[type="date"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+}
+
+input[type="date"]:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

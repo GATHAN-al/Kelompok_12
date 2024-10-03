@@ -1,0 +1,164 @@
+.kamar {
+    width: 100%; /* Lebar container penuh */
+    display: flex; /* Flexbox digunakan untuk tata letak */
+    justify-content: space-between; /* Item di dalam container tersebar merata */
+    flex-wrap: wrap; /* Mengizinkan item untuk membungkus ke baris baru jika diperlukan */
+   
+}
+
+/* Left and Right Columns */
+.left-column, .right-column {
+    display: flex; /* Flexbox untuk tata letak kolom */
+    flex-direction: column; /* Elemen dalam kolom disusun secara vertikal */
+    width: 48%; /* Lebar setiap kolom adalah 48% */
+}
+
+/* Card Styles */
+.card {
+    position: relative; /* Posisi relatif untuk mengatur posisi elemen lain di dalamnya */
+    width: 100%; /* Lebar kartu penuh */
+    height: 300px; /* Tinggi kartu 300px */
+    padding: 15px; /* Padding di dalam kartu */
+    background-color: rgba(255, 255, 255, 0); /* Latar belakang kartu transparan */
+    margin-bottom: 15px; /* Jarak bawah antar kartu */
+    border-radius: 20px; /* Sudut kartu melengkung */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Efek bayangan lembut di sekitar kartu */
+    overflow: hidden; /* Sembunyikan konten yang keluar dari batas kartu */
+    transition: 0.3s ease; /* Transisi lembut saat hover */
+}
+
+/* Card Titles */
+.card h2 {
+    z-index: 99; /* Membawa elemen ke depan */
+    position: absolute; /* Posisi absolut untuk mengatur posisi manual */
+    bottom: 25px; /* Jarak dari bawah 25px */
+    left: 20px; /* Jarak dari kiri 20px */
+    font-size: 28px; /* Ukuran font judul */
+    font-weight: 700; /* Ketebalan font judul */
+    color: #020826; 
+    transition: 0.2s ease; /* Transisi lembut pada perubahan posisi atau warna */
+}
+
+/* Card Descriptions */
+.card p {
+    z-index: 99; /* Elemen berada di atas elemen lain */
+    position: absolute; /* Posisi absolut untuk penempatan manual */
+    bottom: 10px; /* Jarak dari bawah 10px */
+    left: 20px; /* Jarak dari kiri 20px */
+    width: 150px; /* Lebar teks deskripsi */
+    color: #020826; 
+    opacity: 0; /* Deskripsi tersembunyi (akan muncul saat hover) */
+    font-size: 14px; /* Ukuran font deskripsi */
+    text-align: left; /* Teks rata kiri */
+    letter-spacing: 1px; /* Jarak antar huruf */
+    transition: 0.2s ease; /* Transisi lembut saat hover */
+}
+
+/* Card Image */
+.card .pic {
+    z-index: 100; /* Membawa elemen gambar ke depan */
+    width: 100%; /* Lebar gambar penuh */
+    height: 180px; /* Tinggi gambar 180px */
+    background-size: cover; /* Menutup penuh elemen dengan gambar */
+    background-position: center; /* Gambar diposisikan di tengah */
+    border-radius: 12px; /* Sudut gambar melengkung */
+    transition: 0.3s ease; /* Transisi lembut pada perubahan filter */
+}
+
+.card:hover .pic {
+    filter: grayscale(0); /* Hilangkan grayscale saat hover */
+}
+
+/* Specific Background Images for Each Card */
+.card:nth-child(1) .pic {
+    background-image: url('2.jpg'); /* Gambar untuk kartu pertama */
+}
+
+.card:nth-child(2) .pic {
+    background-image: url('1.jpg'); /* Gambar untuk kartu kedua */
+}
+
+.right-column .card:nth-child(1) .pic {
+    background-image: url('3.jpg'); /* Gambar untuk kartu pertama di kolom kanan */
+}
+
+.right-column .card:nth-child(2) .pic {
+    background-image: url('3.jpg'); /* Gambar untuk kartu kedua di kolom kanan */
+}
+
+/* Card Button */
+.card button {
+    position: absolute; /* Posisi absolut di dalam kartu */
+    right: 30px; /* Jarak dari kanan 30px */
+    bottom: 40px; /* Jarak dari bawah 40px */
+    width: 30px; /* Lebar tombol 30px */
+    height: 30px; /* Tinggi tombol 30px */
+    background-color: #772a9b; /* Warna tombol ungu */
+    border: none; /* Tidak ada border */
+    border-radius: 50%; /* Tombol bulat */
+    cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
+    transition: 0.3s ease; /* Transisi lembut saat hover */
+}
+
+.card:hover button {
+    transform: scale(16.5); /* Perbesar tombol saat hover */
+    opacity: 0.5; /* Ubah transparansi tombol */
+}
+
+/* Card Hover Effects */
+.card:hover h2 {
+    bottom: 80px; /* Geser judul ke atas saat hover */
+    left: 20px; /* Tetap di posisi kiri 20px */
+}
+
+.card:hover p {
+    opacity: 1; /* Tampilkan deskripsi saat hover */
+    left: 20px; /* Tetap di posisi kiri 20px */
+}
+
+/* Special Styling for Second Card */
+.card2 .pic {
+    background-image: url('1.jpg'); /* Gambar khusus untuk card2 */
+}
+
+.card2 button {
+    background-color: #26c3a1; /* Warna tombol khusus untuk card2 */
+}
+
+
+
+.cta-button {
+    background-color: #1e1f1f; /* Warna latar tombol Call to Action */
+    color: white; /* Warna teks tombol */
+    padding: 10px 20px; /* Padding di dalam tombol */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-size: 18px; /* Ukuran font tombol */
+    border-radius: 5px; /* Sudut tombol melengkung */
+}
+
+/* Section Padding */
+.section {
+    padding: 60px 20px; /* Padding untuk section */
+    text-align: center; /* Teks diatur di tengah */
+}
+
+/* Room Grid Layout */
+.room-grid {
+    display: flex; /* Flexbox untuk tata letak grid */
+    justify-content: space-around; /* Item di dalam grid tersebar merata */
+    margin-top: 30px; /* Jarak dari atas 30px */
+}
+
+.room-card {
+    background-color: white; /* Warna latar belakang kartu kamar */
+    border-radius: 8px; /* Sudut kartu melengkung */
+    padding: 20px; /* Padding di dalam kartu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan ringan */
+    width: 30%; /* Lebar kartu 30% */
+    text-align: center; /* Teks di dalam kartu diatur di tengah */
+}
+
+.room-card img {
+    width: 100%; /* Gambar mengambil lebar penuh kartu */
+    border-radius: 8px 8px 0 0; /* Sudut gambar melengkung di bagian atas */
+}
