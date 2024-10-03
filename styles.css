@@ -105,6 +105,7 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: #f8f5f2; /* Warna latar belakang body */
   color: #333; /* Warna teks default */
 }
@@ -414,7 +415,6 @@ input#Akomodasi3:checked ~ nav::before {
 /* Hero Section */
 .hero {
   height: 100vh; /* Hero section mengambil tinggi penuh layar */
-  background: url("1.jpg") no-repeat center center/cover; /* Gambar latar yang diposisikan di tengah dan menutupi seluruh area */
   display: flex; /* Flexbox untuk tata letak hero */
   flex-direction: column; /* Elemen di dalam hero disusun secara vertikal */
   justify-content: center; /* Elemen di dalam hero diatur di tengah secara vertikal */
@@ -431,6 +431,64 @@ input#Akomodasi3:checked ~ nav::before {
 .hero-content p {
   font-size: 20px; /* Ukuran font deskripsi hero */
   margin-bottom: 40px; /* Jarak bawah deskripsi */
+}
+.slide-1 {
+  background: url('1.jpg');
+}
+.slide-2 {
+  background: url('6.jpg');
+}
+.slide-3 {
+  background: url('7.jpg');
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh; /* Hero section mengambil tinggi penuh layar */
+  display: flex; /* Flexbox untuk tata letak hero */
+  flex-direction: column; /* Elemen di dalam hero disusun secara vertikal */
+  justify-content: center; /* Elemen di dalam hero diatur di tengah secara vertikal */
+  align-items: center; /* Elemen di dalam hero diatur di tengah secara horizontal */
+  background-position: center;
+  position: relative;
+}
+.caption {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+}
+.caption h3 {
+  color: white;
+  text-align: center;
+  font-size: 70px;
+}
+.caption p {
+  max-width: 600px;
+  margin:auto;
+  color: #ffffff;
+  text-align: center;
+  font-size:35px;
+  line-height: 1.5em;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 100;
+  background: rgba(0, 0, 0, .1);
+  border-radius: 50%;
+}
+.arrow img {
+  width: 50px;
+}
+.arrow:hover {
+  background: rgba(0, 0, 0, .4);
+}
+.l {
+  left: 0;
+}
+.r {
+  right: 0;
 }
 
 .cta-button {
