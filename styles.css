@@ -105,6 +105,7 @@ body {
     background-color: #f8f5f2; /* Warna latar belakang body */
     color: #333; /* Warna teks default */
 }
+
 head {
      /* Sudah cukup dengan 100vh */
     margin: 0;
@@ -391,7 +392,7 @@ input#Akomodasi3:checked ~ nav::before {
 }
 
 .slide {
-    width: 2200px;
+    width: 1700px;
     height: 100vh;
     background-position: center;
     position: relative;
@@ -402,7 +403,7 @@ input#Akomodasi3:checked ~ nav::before {
     top: 40%;
 }
 .caption h3 {
-    color: #fff;
+    color: white;
     text-align: center;
     font-size: 70px;
 }
