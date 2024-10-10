@@ -45,7 +45,7 @@
                     <li><a id="nav-dining" href="#dining">Dining</a></li>
                     <li><a id="nav-gallery" href="#gallery">Gallery</a></li>
                     <li><a id="nav-contact" href="#contact">Contact</a></li>
-                      <div class="language-switcher">
+                    <div class="language-switcher">
                         <button class="language-button" id="en-button" onclick="changeLanguage('en')">EN</button>
                         <button class="language-button" id="in-button" onclick="changeLanguage('id')">ID</button>
                     </div>
@@ -138,6 +138,7 @@
   
   
     <!-- Rooms Section -->
+
     <section id="" class="section rooms">
         <div class="kamar">
             <div class="left-column">
@@ -159,27 +160,27 @@
         
             <div class="right-column">
                 <div class="card">
-                    <h2>Luxury Suite</h2>
-                    <p>Experience the best luxury in our spacious suites.</p>
+                    <h2 id="luxury-suite-heading">Luxury Suite</h2>
+                    <p id="luxury-suite-text">Experience the best luxury in our spacious suites.</p>
                     <a href="booking.html">
                         <div class="pic"></div>
                     </a>                    <button></button>
                 </div>
                 <div class="card">
-                    <h2>Deluxe Room</h2>
-                    <p>Comfortable and elegant rooms with a stunning view.</p>
+                    <h2 id="deluxe-room-heading">Deluxe Room</h2>
+                    <p id="deluxe-room-text">Comfortable and elegant rooms with a stunning view.</p>
                     <a href="booking.html">
                         <div class="pic"></div>
                     </a>                    <button></button>
                 </div>
-            </div>
+            </div>            
             <div class="wrapper">
-              <div class="scroll-content">
-                  <!-- Add 6 logos with unique class names -->
-                  <div class="item item1">
-                      <img src="agoda.jpg" alt="agoda logo">
-                  </div>
-                  <div class="item item2">
+                <div class="scroll-content">
+                    <!-- Add 6 logos with unique class names -->
+                    <div class="item item1">
+                        <img src="agoda.png" alt="agoda logo">
+                    </div>
+                    <div class="item item2">
                       <img src="accor.png" alt="accor logo">
                   </div>
                   <div class="item item3">
@@ -232,19 +233,19 @@
     </section>
 
     <section id="amenities" class="section amenities">
-        <h2>Amenities</h2>
+        <h2 id="amenities-heading">Amenities</h2>
         <div class="amenities-list">
-            <div class="amenity">Spa & Wellness</div>
-            <div class="amenity">Infinity Pool</div>
-            <div class="amenity">Private Beach</div>
-            <div class="amenity">Fitness Center</div>
+            <div class="amenity" id="amenity-spa">Spa & Wellness</div>
+            <div class="amenity" id="amenity-pool">Infinity Pool</div>
+            <div class="amenity" id="amenity-beach">Private Beach</div>
+            <div class="amenity" id="amenity-fitness">Fitness Center</div>
         </div>
-    </section>
+    </section>    
 
     <section id="dining" class="section dining">
-        <h2>Dining Experience</h2>
-        <p>Enjoy world-class dining at our beachfront restaurants.</p>
-    </section>
+        <h2 id="dining-heading">Dining Experience</h2>
+        <p id="dining-description">Enjoy world-class dining at our beachfront restaurants.</p>
+    </section>    
 
     <div class="container swiper">
       <div class="slider-wrapper">
@@ -252,7 +253,7 @@
           <div class="card-item swiper-slide">
             <img src="user1.jpg" alt="User Profile" class="user-image" />
             <h3 class="user-name">Liam Parker</h3>
-            <p class="review-text">"We are presently staying in the most luxurious resort we have ever been to. The Bali resort Nusa Dua Beach Resort is a most wonderful place to have a holiday. The resort is so beautiful and has the highest quality facilities. "</p>
+            <p class="review-text" id="review-text">"We are presently staying in the most luxurious resort we have ever been to. The Bali resort Nusa Dua Beach Resort is a most wonderful place to have a holiday. The resort is so beautiful and has the highest quality facilities."</p>            
             <div class="review-rating">
               <span class="material-symbols-outlined"> star </span>
               <span class="material-symbols-outlined"> star </span>
@@ -264,7 +265,7 @@
           <div class="card-item swiper-slide">
             <img src="user7.jpg" alt="User Profile" class="user-image" />
             <h3 class="user-name">Sophia Latjuba</h3>
-            <p class="review-text">"as much as I enjoyed the overall stay, but the hotel is lacking of convenience store for snacks and beverages, and the bed in the room has obviously sinked in too much for a comfortable sleep."</p>
+            <p class="review-text" id="review-text-2">"as much as I enjoyed the overall stay, but the hotel is lacking a convenience store for snacks and beverages, and the bed in the room has obviously sunk in too much for a comfortable sleep."</p>
             <div class="review-rating">
               <span class="material-symbols-outlined"> star </span>
               <span class="material-symbols-outlined"> star </span>
@@ -276,7 +277,7 @@
           <div class="card-item swiper-slide">
             <img src="user3.jpg" alt="User Profile" class="user-image" />
             <h3 class="user-name">Peter Larssen</h3>
-            <p class="review-text">"Amazing hotel in Nusa Dua. Family friendly and luxurious. Rooms and per the photos, super cleanly and spacious. Definitely recommend this hotel if you are planning a trip to Bali away from the hustle and bustle of Kuta"</p>
+            <p class="review-text" id="review-text-3">"Amazing hotel in Nusa Dua. Family friendly and luxurious. Rooms are as per the photos, super clean and spacious. Definitely recommend this hotel if you are planning a trip to Bali away from the hustle and bustle of Kuta."</p>
             <div class="review-rating">
               <span class="material-symbols-outlined"> star </span>
               <span class="material-symbols-outlined"> star </span>
@@ -288,7 +289,7 @@
           <div class="card-item swiper-slide">
             <img src="user4.jpg" alt="User Profile" class="user-image" />
             <h3 class="user-name">Billy Foster</h3>
-            <p class="review-text">".The hotel location in Nusa Dua is excellent. There's plenty in the resort to entertain and feed you, and if you want more you can stroll along the beach to any of the other restaurants or resorts. Everything was good!!!"</p>
+            <p class="review-text" id="review-text-4">"The hotel location in Nusa Dua is excellent. There's plenty in the resort to entertain and feed you, and if you want more, you can stroll along the beach to any of the other restaurants or resorts. Everything was good!!!"</p>
             <div class="review-rating">
               <span class="material-symbols-outlined"> star </span>
               <span class="material-symbols-outlined"> star </span>
@@ -300,7 +301,7 @@
           <div class="card-item swiper-slide">
             <img src="user5.jpg" alt="User Profile" class="user-image" />
             <h3 class="user-name">Allison Brooks</h3>
-            <p class="review-text">"We enjoyed our stay at Sofitel Nusa Dua!! Thank you for the amazing service and big shoutout to Ravael for making our stay special and memorable. Will definitely come back and stay."</p>
+            <p class="review-text" id="review-text-5">"We enjoyed our stay at Sofitel Nusa Dua!! Thank you for the amazing service and big shoutout to Ravael for making our stay special and memorable. Will definitely come back and stay."</p>
             <div class="review-rating">
               <span class="material-symbols-outlined"> star </span>
               <span class="material-symbols-outlined"> star </span>
