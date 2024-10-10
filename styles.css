@@ -3,119 +3,24 @@
   margin: 0; /* Menghapus margin default dari semua elemen */
   padding: 0; /* Menghapus padding default dari semua elemen */
   box-sizing: border-box; /* Mengatur box-sizing agar padding dan border tidak menambah ukuran elemen */
-  font-family: "Lora", sans-serif; /* font lora jika tersedia di device user, sans-serif cadangan */
+  font-family: Arial, sans-serif;
 }
 
-*,
-*::before,
-*::after {
-  /* Semua elemen menggunakan model: */
+
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 * {
-  margin: 0; /* Jarak antar elemen */
-  padding: 0; /* Jarak antar isi elemen */
-}
-
-/* rating bergerak */
-.wrapper {
-  width: 90%; /* lebar elemen */
-  max-width: 1536px;
-  margin-inline: auto; /* Auto ada di tengah secara horizontal*/
-  position: relative;
-  height: 100px;
-  margin-top: 5rem; /* 1 rem sama dengan ukuran font dasar */
-  overflow: hidden; /* Konten yang berada di luar area tampilan elemen akan disembunyikan */
-  mask-image: linear-gradient(
-    to right,
-    /* Gradien bergerak ke kanan (makin kuat) */ rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
-}
-
-.scroll-content {
-  display: flex;
-  gap: 20px;
-  animation: scrollLeft 20s linear infinite; /* bergerak ke kiri secara konstan dan tidak berhenti */
-  will-change: transform;
-}
-
-@keyframes scrollLeft {
-  to {
-    left: -200px; /* pada akhir animasi, scroll left .. px */
-  }
-}
-
-.item {
-  width: 200px;
-  height: 100px;
-  background-color: white;
-  border-radius: 6px;
-  flex-shrink: 0; /* Mencegah item mengecil */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: max(calc(200px * 8), 100%);
-  animation-name: scrollLeft;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.item img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Set individual animation-delay for each item */
-.item1 {
-  animation-delay: calc(20s / 8 * (8 - 1) * -1);
-}
-
-.item2 {
-  animation-delay: calc(20s / 8 * (8 - 2) * -1);
-}
-
-.item3 {
-  animation-delay: calc(20s / 8 * (8 - 3) * -1);
-}
-
-.item4 {
-  animation-delay: calc(20s / 8 * (8 - 4) * -1);
-}
-
-.item5 {
-  animation-delay: calc(20s / 8 * (8 - 5) * -1);
-}
-
-.item6 {
-  animation-delay: calc(20s / 8 * (8 - 6) * -1);
-}
-
-.item7 {
-  animation-delay: calc(20s / 8 * (8 - 7) * -1);
-}
-
-.item8 {
-  animation-delay: calc(20s / 8 * (8 - 8) * -1);
-}
-
-body {
-  overflow-x: hidden;
-  background-color: #f8f5f2; /* Warna latar belakang body */
-  color: #333; /* Warna teks default */
-}
-head {
-  /* Sudah cukup dengan 100vh */
   margin: 0;
-  justify-content: center;
-  align-items: center;
-  background: #f9f4ef;
+  padding: 0;
 }
+body{
+  background-color: #f8f5f2;
+  overflow-x: hidden;
+
+}
+
 /* Container Layout */
 .container {
   max-width: 350px;
@@ -124,11 +29,11 @@ head {
   border-radius: 15px;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 100%;
-  position: relative;
+   
 }
 
 .container nav {
+
   position: relative;
   height: 50px;
   width: 100%; /* Make the nav take full width */
@@ -165,7 +70,7 @@ input[type="radio"]:checked + nav label {
   color: #1e1f1f;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   display: none;
 }
 
@@ -195,16 +100,22 @@ input#Akomodasi3:checked ~ nav::before {
   left: 57%;
 }
 
+
+
+
+
+
+
 .kamar {
   width: 100%; /* Lebar container penuh */
   display: flex; /* Flexbox digunakan untuk tata letak */
   justify-content: space-between; /* Item di dalam container tersebar merata */
   flex-wrap: wrap; /* Mengizinkan item untuk membungkus ke baris baru jika diperlukan */
+ 
 }
 
 /* Left and Right Columns */
-.left-column,
-.right-column {
+.left-column, .right-column {
   display: flex; /* Flexbox untuk tata letak kolom */
   flex-direction: column; /* Elemen dalam kolom disusun secara vertikal */
   width: 48%; /* Lebar setiap kolom adalah 48% */
@@ -216,12 +127,7 @@ input#Akomodasi3:checked ~ nav::before {
   width: 100%; /* Lebar kartu penuh */
   height: 300px; /* Tinggi kartu 300px */
   padding: 15px; /* Padding di dalam kartu */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0
-  ); /* Latar belakang kartu transparan */
+  background-color: rgba(255, 255, 255, 0); /* Latar belakang kartu transparan */
   margin-bottom: 15px; /* Jarak bawah antar kartu */
   border-radius: 20px; /* Sudut kartu melengkung */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Efek bayangan lembut di sekitar kartu */
@@ -237,7 +143,7 @@ input#Akomodasi3:checked ~ nav::before {
   left: 20px; /* Jarak dari kiri 20px */
   font-size: 28px; /* Ukuran font judul */
   font-weight: 700; /* Ketebalan font judul */
-  color: #020826;
+  color: #020826; 
   transition: 0.2s ease; /* Transisi lembut pada perubahan posisi atau warna */
 }
 
@@ -248,7 +154,7 @@ input#Akomodasi3:checked ~ nav::before {
   bottom: 10px; /* Jarak dari bawah 10px */
   left: 20px; /* Jarak dari kiri 20px */
   width: 150px; /* Lebar teks deskripsi */
-  color: #020826;
+  color: #020826; 
   opacity: 0; /* Deskripsi tersembunyi (akan muncul saat hover) */
   font-size: 14px; /* Ukuran font deskripsi */
   text-align: left; /* Teks rata kiri */
@@ -273,19 +179,19 @@ input#Akomodasi3:checked ~ nav::before {
 
 /* Specific Background Images for Each Card */
 .card:nth-child(1) .pic {
-  background-image: url("2.jpg"); /* Gambar untuk kartu pertama */
+  background-image: url('2.jpg'); /* Gambar untuk kartu pertama */
 }
 
 .card:nth-child(2) .pic {
-  background-image: url("1.jpg"); /* Gambar untuk kartu kedua */
+  background-image: url('1.jpg'); /* Gambar untuk kartu kedua */
 }
 
 .right-column .card:nth-child(1) .pic {
-  background-image: url("3.jpg"); /* Gambar untuk kartu pertama di kolom kanan */
+  background-image: url('3.jpg'); /* Gambar untuk kartu pertama di kolom kanan */
 }
 
 .right-column .card:nth-child(2) .pic {
-  background-image: url("3.jpg"); /* Gambar untuk kartu kedua di kolom kanan */
+  background-image: url('3.jpg'); /* Gambar untuk kartu kedua di kolom kanan */
 }
 
 /* Card Button */
@@ -320,36 +226,16 @@ input#Akomodasi3:checked ~ nav::before {
 
 /* Special Styling for Second Card */
 .card2 .pic {
-  background-image: url("1.jpg"); /* Gambar khusus untuk card2 */
+  background-image: url('1.jpg'); /* Gambar khusus untuk card2 */
 }
 
 .card2 button {
   background-color: #26c3a1; /* Warna tombol khusus untuk card2 */
 }
 
-/* Navbar Styling */
-.navbar {
-  display: flex; /* Flexbox untuk tata letak navbar */
-  justify-content: space-between; /* Item di dalam navbar diatur dengan jarak merata */
-  align-items: center; /* Item di dalam navbar disejajarkan di tengah secara vertikal */
-  padding: 20px; /* Padding untuk navbar */
-  background-color: rgba(255, 255, 255, 0); /* Navbar transparan awalnya */
-  position: fixed; /* Ubah posisi menjadi fixed agar tetap saat scrolling */
-  width: 100%; /* Lebar navbar penuh */
-  top: 0; /* Posisi navbar di bagian atas halaman */
-  z-index: 1000; /* Z-index tinggi agar navbar selalu di atas elemen lain */
-  transition: background-color 0.3s ease; /* Animasi transisi untuk background */
-}
-/*  */
-.navbar.scrolled {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Warna latar navbar ketika scroll */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan saat navbar di-scroll */
-}
+
+
+
 
 .navbar .logo {
   font-size: 24px; /* Ukuran font logo */
@@ -436,10 +322,10 @@ input#Akomodasi3:checked ~ nav::before {
   background: url('1.jpg');
 }
 .slide-2 {
-  background: url('6.jpg');
+  background: url('4.jpg');
 }
 .slide-3 {
-  background: url('7.jpg');
+  background: url('5.jpg');
 }
 
 .slide {

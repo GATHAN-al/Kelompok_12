@@ -1,0 +1,79 @@
+/* Container Layout */
+.container {
+    max-width: 350px;
+    width: 100%;
+    padding: 30px 10px;
+    border-radius: 15px;
+    flex-direction: column;
+    margin: 0 auto;
+    
+    
+}
+
+.container nav {
+  
+    position: relative;
+    height: 50px;
+    width: 100%; /* Make the nav take full width */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the nav content horizontally */
+}
+
+.container nav::after {
+    content: "";
+    background: silver;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 47px;
+    filter: blur(0.5px);
+}
+
+.container nav label {
+    position: relative;
+    display: block;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+/* When the radio input is checked, change the label color */
+input[type="radio"]:checked + nav label {
+    color: #1e1f1f;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+/* Creating the sliding indicator for the navigation */
+.container nav::before {
+    content: "";
+    position: absolute;
+    height: 4.5px;
+    background-color: #1e1f1f;
+    border-radius: 20px;
+    width: 20%; /* Adjust this to fit your label */
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+    filter: blur(0.4px);
+}
+
+/* Add different styles to move the slider based on which radio input is checked */
+input#Akomodasi1:checked ~ nav::before {
+    left: 19%;
+}
+input#Akomodasi2:checked ~ nav::before {
+    left: 40%;
+}
+input#Akomodasi3:checked ~ nav::before {
+    left: 57%;
+}
