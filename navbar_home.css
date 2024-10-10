@@ -1,0 +1,94 @@
+/* Navigation */
+.navbar {
+    position: fixed; /* Mengubah posisi dari absolute menjadi fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+    background: transparent; /* Background transparan */
+    z-index: 10;
+    transition: background-color 0.3s ease; /* Menambahkan transisi perubahan background */
+  }
+  
+  .navbar:hover {
+    background: rgba(255, 255, 255, 0.1); /* Efek hover sedikit transparan */
+  }
+  
+  .logo {
+    position: absolute;
+    left: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Warna logo biru muda */
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white; /* Background transparan untuk link */
+    padding: 20px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
+  }
+  
+  .nav-links li {
+    list-style: none;
+    margin: 0 60px; /* Mengurangi jarak antar item menu */
+  }
+  
+  .nav-links li a {
+    position: relative;
+    color: black; /* Warna teks navigasi tetap putih terang */
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Menambahkan transisi pada warna teks */
+  }
+  
+  .nav-links li a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: black; /* Warna efek hover garis hijau */
+    border-radius: 12px;
+    transition: all 0.4s ease;
+  }
+  
+  .nav-links li a:hover:before {
+    width: 100%;
+  }
+  
+  .nav-links li a:hover {
+    color: white; /* Warna teks berubah menjadi hijau saat hover */
+  }
+  
+  /* Hero Section */
+  .hero-content {
+    height: 100vh;
+    background: url('1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 24px;
+  }
+  

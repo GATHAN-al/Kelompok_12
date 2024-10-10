@@ -1,0 +1,207 @@
+<html>
+ <head>
+  <title>Sofitel Bali Nusa Dua Beach Resort</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="booking.css">
+  <script src="tanggal.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+ </head>
+ <body>
+  <div class="navbar">
+   <div class="left">
+    <a href="home.html">Sofitel Bali Nusa Dua Beach Resort</a>
+    <a href="#">Availability</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Policies</a>
+   </div>
+   <div class="right">
+    <a href="#">IDR</a>
+    <a href="#">English</a>
+   </div>
+  </div>
+  <div class="header-image"></div>
+  <div class="search-bar">
+    <!-- Checkin Date -->
+    <div class="input-group">
+      <label for="dates">Select dates</label>
+      <div class="input-box" id="dates">
+        <i class="fas fa-calendar-alt"></i>
+        <input type="date" id="checkin" name="checkin" required class="input-field">
+        <span>→</span>
+        <input type="date" id="checkout" name="checkout" required class="input-field">
+      </div>
+    </div>
+  
+    <!-- Room and Guest -->
+    <div class="input-group">
+      <label for="rooms-guests"></label>
+      <div class="input-box" id="rooms-guests">
+        <i class="fas fa-user"></i>
+        <div class="room-guest-selector">
+          <div class="selector-group">
+            <label for="room-count">Rooms</label>
+            <button type="button" onclick="decreaseValue('room-count')">-</button>
+            <input type="number" id="room-count" name="room-count" value="1" min="1" max="10" readonly>
+            <button type="button" onclick="increaseValue('room-count')">+</button>
+          </div>
+  
+          <div class="selector-group">
+            <label for="guest-count">Guests</label>
+            <button type="button" onclick="decreaseValue('guest-count')">-</button>
+            <input type="number" id="guest-count" name="guest-count" value="1" min="1" max="20" readonly>
+            <button type="button" onclick="increaseValue('guest-count')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Promo Code -->
+    <div class="input-group">
+      <label for="promo-code">Enter Promo Code</label>
+      <div class="input-box" id="promo-code">
+        <i class="fas fa-tag"></i>
+        <input type="text" id="promo-code-input" name="promo-code" placeholder="Enter promo code" class="input-field">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main-content">
+      <div class="room-card" data-availability="2024-09-2,2024-09-27,2024-09-28">
+        <div class="room-info">
+          <img alt="Ocean view room with a large bed and a beautiful view of the ocean" height="100" src="1.jpg" width="150"/>
+          <div class="room-details">
+            <h3>01. Luxury room, Ocean View</h3>
+            <p><i class="fas fa-bed"></i> Sleeps: 3 | <i class="fas fa-bed"></i> 1 King Bed | <i class="fas fa-bath"></i> 1 Bathroom</p>
+            <p><i class="fas fa-check"></i> Ocean view | <i class="fas fa-check"></i> Non-smoking | <i class="fas fa-check"></i> Television | <i class="fas fa-check"></i> Internet Access | <i class="fas fa-check"></i> Hairdryer | <i class="fas fa-check"></i> Air conditioned</p>
+            <p>40 m² / 431 ft², Modern living comfort with magnificent views of the Indian Ocean, LCD TV, luxurious bathroom complete with...</p>
+            <a href="#">More info</a>
+          </div>
+        </div>
+        <div class="unavailable-dates">
+          <span>Thu, 26 Sept – Fri, 27 Sept are unavailable</span>
+          <a href="#">Find suitable dates</a>
+        </div>
+      </div>
+      
+      <div class="room-card" data-availability="2024-09-29,2024-09-30,2024-10-01">
+        <div class="room-info">
+          <img alt="Ocean view room with a large bed and a beautiful view of the ocean" height="100" src="2.jpg" width="150"/>
+          <div class="room-details">
+            <h3>02. Luxury room, Ocean View</h3>
+            <p><i class="fas fa-bed"></i> Sleeps: 3 | <i class="fas fa-bed"></i> 1 King Bed | <i class="fas fa-bath"></i> 1 Bathroom</p>
+            <p><i class="fas fa-check"></i> Ocean view | <i class="fas fa-check"></i> Non-smoking | <i class="fas fa-check"></i> Television | <i class="fas fa-check"></i> Internet Access | <i class="fas fa-check"></i> Hairdryer | <i class="fas fa-check"></i> Air conditioned</p>
+            <p>40 m² / 431 ft², Modern living comfort with magnificent views of the Indian Ocean, LCD TV, luxurious bathroom complete with...</p>
+            <a href="#">More info</a>
+          </div>
+        </div>
+        <div class="unavailable-dates">
+          <span>Thu, 29 Sept – Fri, 30 Sept are unavailable</span>
+          <a href="#">Find suitable dates</a>
+        </div>
+      </div>
+
+      <div class="room-card" data-availability="2024-09-29,2024-09-30,2024-10-01">
+        <div class="room-info">
+          <img alt="Prestige suite with a large bed and luxurious amenities" height="100" src="1.jpg" width="150"/>
+          <div class="room-details">
+            <h3>03. Prestige Suite</h3>
+            <p><i class="fas fa-bed"></i> Sleeps: 4 | <i class="fas fa-bed"></i> 1 King Bed | <i class="fas fa-bath"></i> 2 Bathrooms</p>
+            <p><i class="fas fa-check"></i> Sea view | <i class="fas fa-check"></i> Non-smoking | <i class="fas fa-check"></i> Private pool | <i class="fas fa-check"></i> Television | <i class="fas fa-check"></i> Internet Access | <i class="fas fa-check"></i> Air conditioned</p>
+            <p>Separate villa with private pool, living area, and luxurious amenities.</p>
+            <a href="#">More info</a>
+          </div>
+        </div>
+        <div class="unavailable-dates">
+          <span>Thu, 26 Sept – Fri, 27 Sept are unavailable</span>
+          <a href="#">Find suitable dates</a>
+        </div>
+      </div>
+      
+     
+
+      <div class="room-card" data-availability="2024-09-29,2024-09-30,2024-10-01">
+        <div class="room-info">
+          <img alt="Luxury villa with a large bed and ocean views" height="100" src="1.jpg" width="150"/>
+          <div class="room-details">
+            <h3>04. Luxury Villa</h3>
+            <p><i class="fas fa-bed"></i> Sleeps: 6 | <i class="fas fa-bed"></i> 2 King Beds | <i class="fas fa-bath"></i> 3 Bathrooms</p>
+            <p><i class="fas fa-check"></i> Ocean view | <i class="fas fa-check"></i> Non-smoking | <i class="fas fa-check"></i> Private pool | <i class="fas fa-check"></i> Television | <i class="fas fa-check"></i> Internet Access | <i class="fas fa-check"></i> Air conditioned</p>
+            <p>Spacious villa with 2 bedrooms, private pool, and direct beach access.</p>
+            <a href="#">More info</a>
+          </div>
+        </div>
+        <div class="unavailable-dates">
+          <span>Thu, 26 Sept – Fri, 27 Sept are unavailable</span>
+          <a href="#">Find suitable dates</a>
+        </div>
+      </div>
+      <div class="room-card" data-availability="2024-09-29,2024-09-30,2024-10-01">
+        <div class="room-info">
+          <img alt="Luxury villa with a large bed and ocean views" height="100" src="1.jpg" width="150"/>
+          <div class="room-details">
+            <h3>05. Luxury Villa</h3>
+            <p><i class="fas fa-bed"></i> Sleeps: 6 | <i class="fas fa-bed"></i> 2 King Beds | <i class="fas fa-bath"></i> 3 Bathrooms</p>
+            <p><i class="fas fa-check"></i> Ocean view | <i class="fas fa-check"></i> Non-smoking | <i class="fas fa-check"></i> Private pool | <i class="fas fa-check"></i> Television | <i class="fas fa-check"></i> Internet Access | <i class="fas fa-check"></i> Air conditioned</p>
+            <p>Spacious villa with 2 bedrooms, private pool, and direct beach access.</p>
+            <a href="#">More info</a>
+          </div>
+        </div>
+        <div class="unavailable-dates">
+          <span>Thu, 26 Sept – Fri, 27 Sept are unavailable</span>
+          <a href="#">Find suitable dates</a>
+        </div>
+      </div>
+      <div class="room-card" data-availability="2024-09-29,2024-09-30,2024-10-01">
+        <div class="room-info">
+          <img alt="Luxury villa with a large bed and ocean views" height="100" src="1.jpg" width="150"/>
+          <div class="room-details">
+            <h3>06. Luxury Villa</h3>
+            <p><i class="fas fa-bed"></i> Sleeps: 6 | <i class="fas fa-bed"></i> 2 King Beds | <i class="fas fa-bath"></i> 3 Bathrooms</p>
+            <p><i class="fas fa-check"></i> Ocean view | <i class="fas fa-check"></i> Non-smoking | <i class="fas fa-check"></i> Private pool | <i class="fas fa-check"></i> Television | <i class="fas fa-check"></i> Internet Access | <i class="fas fa-check"></i> Air conditioned</p>
+            <p>Spacious villa with 2 bedrooms, private pool, and direct beach access.</p>
+            <a href="#">More info</a>
+          </div>
+        </div>
+        <div class="unavailable-dates">
+          <span>Thu, 26 Sept – Fri, 27 Sept are unavailable</span>
+          <a href="#">Find suitable dates</a>
+        </div>
+      </div>
+      <div class="room-card" data-availability="2024-09-29,2024-09-30,2024-10-01">
+        <div class="room-info">
+          <img alt="Luxury villa with a large bed and ocean views" height="100" src="1.jpg" width="150"/>
+          <div class="room-details">
+            <h3>07. Luxury Villa</h3>
+            <p><i class="fas fa-bed"></i> Sleeps: 6 | <i class="fas fa-bed"></i> 2 King Beds | <i class="fas fa-bath"></i> 3 Bathrooms</p>
+            <p><i class="fas fa-check"></i> Ocean view | <i class="fas fa-check"></i> Non-smoking | <i class="fas fa-check"></i> Private pool | <i class="fas fa-check"></i> Television | <i class="fas fa-check"></i> Internet Access | <i class="fas fa-check"></i> Air conditioned</p>
+            <p>Spacious villa with 2 bedrooms, private pool, and direct beach access.</p>
+            <a href="#">More info</a>
+          </div>
+        </div>
+        <div class="unavailable-dates">
+          <span>Thu, 26 Sept – Fri, 27 Sept are unavailable</span>
+          <a href="#">Find suitable dates</a>
+        </div>
+      </div>
+      <script src="tanggal.js"></script>
+        <script src="tanggalkamar.js"></script>
+
+
+    </div>
+    <div class="sidebar">
+      <div id="sidebar-info" style="margin-bottom: 20px;">
+        <h3 id="sidebar-dates"></h3>
+        <p id="sidebar-duration">1 night</p>
+        <p id="sidebar-summary">1 room | 1 guest</p>
+        <p>Select a date to continue</p>
+      </div>
+      <button>Book</button>
+    </div>
+
+ </body>
+</html>
