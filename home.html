@@ -7,6 +7,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bali Resort Hotel</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bali Resort Hotel</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="styles.css">
@@ -136,11 +140,44 @@
       </header>
 
 
-    <div class="container">
+      <div class="container">
         <div class="header">
-            <input placeholder="Check In" type="text"/>
-            <input placeholder="Check Out" type="text"/>
-            <button onclick="window.location.href='booking.html'">CHECK AVAILABILITY</button>        </div>
+          <input type="date" id="checkin" name="checkin" required class="input-field">
+          <span>→</span>
+          <input type="date" id="checkout" name="checkout" required class="input-field">
+          <button onclick="redirectToBooking()">CHECK AVAILABILITY</button>
+        </div>
+      </div>
+      
+      <script>
+      function redirectToBooking() {
+        const checkin = document.getElementById('checkin').value;
+        const checkout = document.getElementById('checkout').value;
+        
+        if (checkin && checkout) {
+          // Redirect to booking.html with the checkin and checkout dates as query parameters
+          window.location.href = `booking.html?checkin=${checkin}&checkout=${checkout}`;
+        } else {
+          alert('Please select both check-in and check-out dates.');
+        }
+      }
+      
+      document.getElementById('checkin').addEventListener('change', validateDates);
+      document.getElementById('checkout').addEventListener('change', validateDates);
+      
+      function validateDates() {
+        const checkinInput = document.getElementById('checkin');
+        const checkoutInput = document.getElementById('checkout');
+      
+        const checkinDate = new Date(checkinInput.value);
+        const checkoutDate = new Date(checkoutInput.value);
+      
+        if (checkinDate && checkoutDate && checkoutDate <= checkinDate) {
+          checkoutInput.value = '';  // Clear invalid checkout date
+          alert('Checkout date must be after the check-in date.');
+        }
+      }
+      </script>
         <div class="content">
             <img alt="Aerial view of a luxurious beach resort surrounded by lush greenery and a beautiful coastline"
             src="1.jpg"
