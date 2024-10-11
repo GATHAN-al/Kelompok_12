@@ -322,10 +322,10 @@ input#Akomodasi3:checked ~ nav::before {
   background: url('1.jpg');
 }
 .slide-2 {
-  background: url('4.jpg');
+  background: url('14.jpg');
 }
 .slide-3 {
-  background: url('5.jpg');
+  background: url('11.jpg');
 }
 
 .slide {
